@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<title>CIS411 HW</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+
+<script>
+
+$(document).ready(function(){
+	var turn = 0;
+	$("#r1c1,#r1c2,#r1c3,#r2c1,#r2c2,#r2c3,#r3c1,#r3c2,#r3c3").click(
+	function(){
+	var cell = $(this);
+	if(turn==0){
+	turn = 1;
+	cell.css("background","url(images/O.png)");
+
+	
+	}
+	else{
+	turn = 0;
+	cell.css("background","url(images/X.png)");
+
+			}
+}
+)
+}
+);
+</script>
+
+
+<style>
+#r1c1, #r1c2, #r2c1, #r2c2{
+
+	width : 100px;
+	height : 100px;
+	border-style : none solid solid none;
+	border-width : 5px;
+	border-color : blue;
+	}
+
+	#r1c3, #r2c3 {
+
+	width : 100px;
+	height : 100px;
+	border-style : none none solid none;
+	border-width : 5px;
+	border-color : blue;
+
+	}
+	
+	#r3c1, #r3c2 {
+
+	width : 100px;
+	height : 100px;
+	border-style : none solid none none;
+	border-width : 5px;
+	border-color : blue;
+
+	}
+	
+	
+	
+</style>
+
+<h1>Tic Tac Toe</h1>
+<table cellpadding = "0" cellspacing ="0">
+<tr id = "row1">
+<td id ="r1c1">&nbsp;</td>
+<td id ="r1c2">&nbsp;</td>
+<td id ="r1c3">&nbsp;</td>
+</tr>
+
+<tr id = "row2">
+<td id ="r2c1">&nbsp;</td>
+<td id ="r2c2">&nbsp;</td>
+<td id ="r2c3">&nbsp;</td>
+</tr>
+
+<tr id = "row3">
+<td id ="r3c1">&nbsp;</td>
+<td id ="r3c2">&nbsp;</td>
+<td id ="r3c3">&nbsp;</td>
+</tr>
+</table>
