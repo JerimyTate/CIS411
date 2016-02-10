@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name assignment5App
+ * @name listProjectApp
  * @description
- * # assignment5App
+ * # listProjectApp
  *
  * Main module of the application.
  */
 angular
-  .module('assignment5App', [
+  .module('listProjectApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -33,16 +33,3 @@ angular
         redirectTo: '/'
       });
   });
-
-
-function loadList() {
-//  var list = document.getElementById('tutorialList');
-    var list = $("#tutorialList").listview();
-
-$(tutorialList.products).each(function(index){
-    $(list).append('<li id="listitem">' + this.title + " = " + this.author + '</li>');
-});    $(list).listview("refresh");
-
-
-// Json array
-var tutorialList = JSON.parse(app\tutorials.Json);
